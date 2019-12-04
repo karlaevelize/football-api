@@ -4,7 +4,7 @@ const router = new Router();
 
 router.get("/team", (request, response, next) => {
   Team.findAll()
-    .then(data => res.send(data))
+    .then(data => response.send(data))
     .catch(errors => next(errors));
 });
 
